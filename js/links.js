@@ -4,7 +4,7 @@ window.LINKS=[
 {g:{ja:"サイト",en:"Websites"},c:"#C9A8F0",items:[
  {icon:"fa-solid fa-globe",name:"NEWS",url:"https://blog.rabbitflowerdiary.com/"},
  {icon:"fa-solid fa-book-open",name:{ja:"お話",en:"Story"},url:"",soon:true},
- {icon:"fa-solid fa-cloud-sun",name:{ja:"うさTVのお天気コーナー",en:"Rabbit TV Weather Corner"},url:"https://rabbittv.rabbitflowerdiary.com/"}]},
+ {icon:"fa-solid fa-cloud-sun",name:{ja:"うさTVのお天気コーナー",en:"Rabbit TV Weather Corner"},url:"http://rabbittv.rabbitflowerdiary.com/"}]},
 {g:{ja:"♥らびこ♥のSNS",en:"♥Rabiko♥ on social media"},c:"#F8A5B8",items:[
  {icon:"fa-brands fa-x-twitter",name:"X",url:"https://x.com/RabbitflowerD"},
  {icon:"fa-brands fa-instagram",name:"Instagram",url:"https://instagram.com/rabbitflowerdiary"},

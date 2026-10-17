@@ -295,5 +295,5 @@ window.CHARS=[
  {t:{ja:"♥らびこ♥との関係",en:"With ♥Rabiko♥"},p:{
   ja:"らびこが毎日見ているお天気予報のテレビ番組のキャスターです。らびこはテレビ越しに見ているだけで、二人はお互いを知る間柄ではありません。",
   en:"She is the caster on the weather forecast that Rabiko watches on TV every day. Rabiko only knows her through the screen, and the two have never met."}},
- {t:{ja:"毎日のお天気ブログ",en:"Her daily blog"},ul:{ja:["うさTVのお天気コーナーを読む"],en:["Read the Rabbit TV Weather Corner"]},link:"https://rabbittv.rabbitflowerdiary.com/"}]}
+ {t:{ja:"毎日のお天気ブログ",en:"Her daily blog"},ul:{ja:["うさTVのお天気コーナーを読む"],en:["Read the Rabbit TV Weather Corner"]},link:"http://rabbittv.rabbitflowerdiary.com/"}]}
 ];
