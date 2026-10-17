@@ -2,7 +2,7 @@
 // icon は Font Awesome（無料）のクラス名。https://fontawesome.com/icons で探せます。
 window.LINKS=[
 {g:{ja:"サイト",en:"Websites"},c:"#C9A8F0",items:[
- {icon:"fa-solid fa-globe",name:{ja:"おしらせ",en:"News"},url:"https://www.rabbitflowerdiary.com/"},
+ {icon:"fa-solid fa-globe",name:"NEWS",url:"https://blog.rabbitflowerdiary.com/"},
  {icon:"fa-solid fa-book-open",name:{ja:"お話",en:"Story"},url:"",soon:true},
  {icon:"fa-solid fa-cloud-sun",name:{ja:"うさTVのお天気コーナー",en:"Rabbit TV Weather Corner"},url:"https://rabbitworld.rabbitflowerdiary.com/"}]},
 {g:{ja:"♥らびこ♥のSNS",en:"♥Rabiko♥ on social media"},c:"#F8A5B8",items:[
