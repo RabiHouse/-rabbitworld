@@ -161,3 +161,6 @@ footer .fsm{font-size:.75rem;opacity:.75}
 main.doc{max-width:760px}.doc h2{font-size:1.2rem;margin-top:2rem;padding-left:.7rem;border-left:8px solid var(--pink)}.doc p,.doc li{font-size:.95rem}.doc .upd{text-align:right;font-size:.85rem;opacity:.7}
 @media(min-width:981px) and (max-width:1150px){.nvi img{height:34px}.top{gap:.5rem .6rem}}
 .mail{display:inline-block;margin-top:.3rem;padding:.2rem 1rem;border-radius:99px;background:#fff;border:2px solid var(--pink);font-weight:700;user-select:all;word-break:break-all}
+
+/* phones: Rabiko card same width as the other cards (grid is one column up to ~490px) */
+@media(max-width:490px){.host-row .card{width:100%}}
