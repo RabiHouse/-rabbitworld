@@ -164,3 +164,17 @@ main.doc{max-width:760px}.doc h2{font-size:1.2rem;margin-top:2rem;padding-left:.
 
 /* phones: Rabiko card same width as the other cards (grid is one column up to ~490px) */
 @media(max-width:490px){.host-row .card{width:100%}}
+
+/* ---- character home (house/shop) block ---- */
+.home{margin-top:2.6rem;padding:1.4rem 1.2rem;background:#fff;border:3px dashed var(--c);border-radius:var(--r)}
+.home h2{text-align:center;font-size:1.5rem}.home h2::after{content:"🐾 🐾 🐾";display:block;font-size:.8rem;letter-spacing:.4em;margin-top:.2rem}
+.homegal{margin-top:1rem}.homegal .track img{aspect-ratio:4/3;object-fit:cover}
+.homet p{margin:.7rem 0}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.8rem;margin-top:1rem}
+.fact{display:flex;gap:.7rem;align-items:center;padding:.7rem .9rem;border-radius:18px;background:color-mix(in srgb,var(--c) 16%,#fff);line-height:1.5;font-size:.92rem}
+.fi{font-size:1.8rem;line-height:1}
+
+/* captions on gallery images */
+.track figure{flex:0 0 100%;margin:0;position:relative;scroll-snap-align:center}
+.track figure img{display:block;width:100%}
+.track figcaption{position:absolute;left:.8rem;right:.8rem;bottom:2.1rem;padding:.3rem .8rem;border-radius:14px;background:rgba(255,255,255,.9);text-align:center;font-weight:700;font-size:.9rem;line-height:1.5}

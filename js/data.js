@@ -3,7 +3,17 @@
 // map:[x,y] = pin position on map.html in % (0-100). Omit it to hide the pin.
 // To add a character: append an object here and drop an image in img/.
 window.CHARS=[
-{id:"rabiko",map:[50,56],imgs:["img/rabiko.webp","img/rabiko-sns.webp"],color:"#F8A5B8",host:1,
+{id:"rabiko",map:[65,35],imgs:["img/rabiko.webp","img/rabiko-sns.webp"],home:{emoji:"🏡",name:{ja:"♥らびこ♥のお家",en:"♥Rabiko♥'s home"},map:true,
+ imgs:["v1792373043/rabiko1_jcedwt.png","v1792373043/rabiko2_feijmc.png","v1792373045/rabiko3_nebxnr.png","v1792373043/rabiko4_q7dkhj.png"],
+ text:{ja:["♥らびこ♥のお家は、一番大きなうさマーケットがある街から、丘を2つ越えたところにあります。","普段は、このお家で、皆様に♥らびこ♥の情報をお届けしています。2つのお部屋には、暖炉が1つずつ。そのとなりの大きな窓から見える景色は、ぜんぶお気に入りです❤","お家の近くにある丘で、のんびりするのも大好きよ🎵 やわらかな風にふかれながら過ごす時間が、いちばんのごほうびです。"],
+  en:["♥Rabiko♥'s home is two hills away from the town with the biggest Rabbit Market.","She usually shares her news with everyone from this home. Each of its two rooms has a fireplace, and she loves every view from the big window beside it ❤","She also loves lounging on the hill near her home 🎵 Spending time there in the soft breeze is her favorite treat."]},
+ facts:[
+  {i:"📍",k:{ja:"場所",en:"Where"},v:{ja:"一番大きなうさマーケットがある街から、丘を2つ越えたところ",en:"Two hills away from the town with the biggest Rabbit Market"}},
+  {i:"🔥",k:{ja:"暖炉",en:"Fireplaces"},v:{ja:"2つのお部屋に、1つずつ",en:"One in each of the two rooms"}},
+  {i:"🪟",k:{ja:"大きな窓",en:"Big window"},v:{ja:"暖炉のとなり。見える景色は、ぜんぶお気に入り",en:"Beside the fireplace. She loves every view from it"}},
+  {i:"🌿",k:{ja:"お気に入りの丘",en:"Favorite hill"},v:{ja:"お家の近くで、のんびり過ごす場所",en:"Near her home, a place to relax"}},
+  {i:"📣",k:{ja:"お仕事場",en:"Workplace"},v:{ja:"ここから、♥らびこ♥の情報をお届け",en:"Where she shares her news with everyone"}}]},
+ color:"#F8A5B8",host:1,
  name:{ja:"♥らびこ♥",en:"♥Rabiko♥"},
  role:{ja:"うさの国と人間界をつなぐインフルエンサー",en:"Influencer linking Rabbit World and the human world"},
  tagline:{ja:"いつもうさの国にいる、みんなのまとめ役",en:"Always here in Rabbit World, bringing everyone together"},
@@ -64,7 +74,20 @@ window.CHARS=[
  {t:{ja:"お気に入りアイテム",en:"Favorite items"},ul:{
   ja:["特注チモシー茶ブレンド（おうち時間に欠かせない、香り高い最高級のチモシー茶）","手作りニットアイテム（マフラーやコースターなど）"],
   en:["Custom Timothy tea blend (finest, fragrant tea she always has at home)","Handmade knit items (scarves, coasters and more)"]}}]},
-{id:"misch",map:[40,62],img:"img/misch.webp",color:"#C9A8F0",
+{id:"misch",home:{emoji:"🥖",name:{ja:"ミッシュのパン屋さん",en:"Misch's bakery"},map:true,
+ imgs:["v1792373040/Misch1_bvnnfv.png","v1792373041/Misch2_p64k8y.png","v1792373043/Misch3_lwsegt.png"],
+ caps:{ja:["朝日がよく当たる","入ったところには、パンがたくさん重なって","奥へ行くと、小さなパンや、パンにのせるとおいしい惣菜なども"],
+  en:["Bathed in morning sun","Just inside, piles and piles of bread","Further in, small breads and savory toppings that go well on bread"]},
+ text:{ja:["毎日朝6時から列を作り、開店と同時に大半のパンが売り切れてしまう、ミッシュさんの経営するパン屋さん。朝早くから、お店の前は、パンの焼ける香りでいっぱいです。","♥らびこ♥は、10日に一度、街へお買い物に行くとき、毎日の朝食のためのパンをまとめ買いします。朝早く起きて丘を越え、街へ着くと、いちばんに並ぶのは、開店前のパン屋さんの列。たまに、目当てのパンが売り切れていることもありますが、早く並べば、たいてい手に入ります。朝日に当たった焼きたてのパンは、いつもおいしそうに、みんなのカゴの中へ入っていきます。","♥らびこ♥のお気に入りは、パンやサンドイッチ、パンに付けるとおいしいバターなど。買いたい物は、たくさんです。","入り口には、保存のきく、よく焼かれたパンが並んでいて、選ぶのが楽しいです。少し奥へ行くと、小さめのデニッシュやクロワッサンなど、持ち運びにぴったりのパンがたくさん並んでいます。世話人が、うさと一緒に買いに来ることも多い、ミッシュさんのパン屋さん。うさの国へ来たときは、ぜひお立ち寄りくださいね。"],
+  en:["Misch's bakery has a line forming from 6 every morning, and most of the bread sells out the moment it opens. From early morning, the front of the shop is full of the smell of baking bread.","Every ten days, when she goes shopping in town, ♥Rabiko♥ buys a stock of bread for her daily breakfasts. She wakes early, crosses the hills, and the first place she lines up is the bakery before it opens. Sometimes the bread she wants is sold out, but if she gets in line early, she can usually get it. Fresh bread in the morning sun happily makes its way into everyone's baskets.","♥Rabiko♥'s favorites are the breads, the sandwiches, and butter that tastes great on bread. There is so much she wants to buy.","At the entrance are well-baked breads that keep for a long time, and choosing is fun. A little further in, there are plenty of small danishes, croissants and other breads perfect for carrying around. Caretakers often come with their rabbits to this bakery. When you visit Rabbit World, please stop by!"]},
+ facts:[
+  {i:"☀️",k:{ja:"朝日",en:"Morning sun"},v:{ja:"お店に、朝日がよく当たります",en:"The shop gets plenty of morning sun"}},
+  {i:"⏰",k:{ja:"行列",en:"The line"},v:{ja:"毎日朝6時から並び、開店と同時に大半が売り切れ",en:"People line up from 6 every morning, and most bread sells out at opening"}},
+  {i:"🥖",k:{ja:"入り口",en:"Entrance"},v:{ja:"保存のきく、よく焼かれたパンが並びます",en:"Well-baked breads that keep for a long time"}},
+  {i:"🥐",k:{ja:"奥のコーナー",en:"Back corner"},v:{ja:"小さめのデニッシュやクロワッサン。持ち運びにぴったり",en:"Small danishes and croissants, perfect for carrying"}},
+  {i:"🧈",k:{ja:"おとも",en:"Go-withs"},v:{ja:"パンにのせるとおいしい惣菜や、パンに付けるバターも",en:"Savory toppings and butter that go well with bread"}},
+  {i:"🧺",k:{ja:"らびこのまとめ買い",en:"Rabiko's stock-up"},v:{ja:"10日に一度、朝食用のパンを、まとめ買い",en:"Once every ten days, she stocks up on breakfast bread"}}]},
+ map:[58,57],img:"img/misch.webp",color:"#C9A8F0",
  name:{ja:"ミッシュ",en:"Misch"},
  role:{ja:"パン職人／ベーカリー オーナーシェフ",en:"Baker / Owner-chef of the bakery"},
  tagline:{ja:"まん丸お耳のパン屋さん",en:"The round-eared baker"},
@@ -295,5 +318,9 @@ window.CHARS=[
  {t:{ja:"♥らびこ♥との関係",en:"With ♥Rabiko♥"},p:{
   ja:"らびこが毎日見ているお天気予報のテレビ番組のキャスターです。らびこはテレビ越しに見ているだけで、二人はお互いを知る間柄ではありません。",
   en:"She is the caster on the weather forecast that Rabiko watches on TV every day. Rabiko only knows her through the screen, and the two have never met."}},
+ {t:{ja:"うさTVニュースページ",en:"Rabbit TV News Page"},p:{
+  ja:"うさTVは、ルブラン美夜子が務めているテレビ局です。うさTVのニュースページは、手動で更新中！🐰💐",
+  en:"Rabbit TV is the TV station where Leblanc Miyako works. The Rabbit TV news page is being updated by hand! 🐰💐"},
+  link:"https://mofu.rabbitflowerdiary.com/",linkText:{ja:"うさTVニュースページを見る",en:"Open the Rabbit TV News Page"}},
  {t:{ja:"毎日のお天気ブログ",en:"Her daily blog"},ul:{ja:["うさTVのお天気コーナーを読む"],en:["Read the Rabbit TV Weather Corner"]},link:"https://rabbittv.rabbitflowerdiary.com/"}]}
 ];

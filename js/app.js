@@ -14,8 +14,11 @@ const card=c=>{const pic=c.img?`<img src="${c.img}" alt="${t(c.name)}">`:c.emoji
  const note=c.note?`<p>${t(c.note)}</p>`:"";
  if(c.href)return `<a class="card" style="--c:${c.color}" href="${c.href}" target="_blank" rel="noopener">${inner}${note}</a>`;
  return c.soon?`<div class="card soon" style="--c:${c.color}">${inner}<p>${lang=="ja"?"準備中":"Coming soon"}</p></div>`:`<a class="card" style="--c:${c.color}" href="character.html?id=${c.id}">${inner}</a>`};
-const pic=c=>{if(!c.img)return `<div class="gal noimg">${c.emoji||"🐰"}</div>`;const a=c.imgs||[c.img],im=a.map((s,i)=>`<img src="${s}" alt="${t(c.name)} ${i+1}">`).join("");
- return `<div class="gal"><div class="track">${im}</div>`+(a.length<2?"":`<button class="nav prev" type="button" aria-label="${lang=="ja"?"前の画像":"Previous image"}">‹</button><button class="nav next" type="button" aria-label="${lang=="ja"?"次の画像":"Next image"}">›</button><div class="dots">${a.map(()=>"<i></i>").join("")}</div>`)+`</div>`};
+const gal=(a,alt,cls="")=>`<div class="gal ${cls}"><div class="track">${a.map((s,i)=>{const o=typeof s=="string"?{src:s}:s,im=`<img src="${o.src}" alt="${alt} ${i+1}"${i?' loading="lazy"':""}>`;return o.cap?`<figure>${im}<figcaption>${o.cap}</figcaption></figure>`:im}).join("")}</div>`+(a.length<2?"":`<button class="nav prev" type="button" aria-label="${lang=="ja"?"前の画像":"Previous image"}">‹</button><button class="nav next" type="button" aria-label="${lang=="ja"?"次の画像":"Next image"}">›</button><div class="dots">${a.map(()=>"<i></i>").join("")}</div>`)+`</div>`;
+const pic=c=>c.img?gal(c.imgs||[c.img],t(c.name)):`<div class="gal noimg">${c.emoji||"🐰"}</div>`;
+const cl=(p,w)=>`https://res.cloudinary.com/${window.CLOUD||"dzgxt2s8f"}/image/upload/f_auto,q_auto:best,c_fill,g_auto,ar_4:3,w_${w}/${p}`;
+const homeBlock=c=>{const h=c.home,cp=h.caps?t(h.caps):[],im=(h.imgs||[]).map((p,i)=>({src:cl(p,1600),cap:cp[i]||""}));
+ return `<section class="home" style="--c:${c.color}"><h2>${h.emoji||"🏠"} ${t(h.name)}</h2>${im.length?gal(im,t(h.name),"homegal"):""}<div class="homet">${t(h.text).map(x=>`<p>${x}</p>`).join("")}</div>${h.facts?`<div class="facts">${h.facts.map(f=>`<div class="fact"><span class="fi">${f.i}</span><div><b>${t(f.k)}</b><br>${t(f.v)}</div></div>`).join("")}</div>`:""}${h.map?`<p class="more"><a class="btn mini" href="map.html"><i class="fa-solid fa-map-location-dot"></i> ${lang=="ja"?"地図で見る":"See the map"}</a></p>`:""}</section>`};
 const upd=tr=>{const g=tr.parentNode,i=Math.round(tr.scrollLeft/tr.clientWidth);g.querySelectorAll(".dots i").forEach((d,k)=>d.classList.toggle("on",k==i))};
 document.addEventListener("scroll",e=>{if(e.target.classList&&e.target.classList.contains("track"))upd(e.target)},true);
 document.addEventListener("click",e=>{const b=e.target.closest(".nav");if(!b)return;const tr=b.parentNode.querySelector(".track");tr.scrollBy({left:(b.classList.contains("next")?1:-1)*tr.clientWidth,behavior:"smooth"})});
@@ -46,7 +49,7 @@ function render(){
   if(!c){d.innerHTML=`<p>${lang=="ja"?"このうさは見つかりませんでした。":"We couldn't find this resident."}</p>`;return}
   document.title=t(c.name)+" | "+(lang=="ja"?"うさの国":"Rabbit World");
   d.innerHTML=`<div class="profile" style="--c:${c.color}">${pic(c)}<div><h1>${t(c.name)}</h1><p>${t(c.tagline)}</p><p class="tags">${t(c.tags).map(x=>`<span>${x}</span>`).join("")}</p></div></div>`+
-  c.sections.map(s=>`<div class="box" style="--c:${c.color}"><h2>${t(s.t)}</h2>${s.p?`<p>${t(s.p)}</p>`:`<ul>${t(s.ul).map(x=>`<li>${s.link?`<a href="${s.link}" target="_blank" rel="noopener">${x}</a>`:x}</li>`).join("")}</ul>`}</div>`).join("")}
+  c.sections.map(s=>`<div class="box" style="--c:${c.color}"><h2>${t(s.t)}</h2>${s.p?`<p>${t(s.p)}</p>${s.link?`<p><a class="btn mini" href="${s.link}" target="_blank" rel="noopener"><i class="fa-solid fa-tv"></i> ${t(s.linkText||s.t)}</a></p>`:""}`:`<ul>${t(s.ul).map(x=>`<li>${s.link?`<a href="${s.link}" target="_blank" rel="noopener">${x}</a>`:x}</li>`).join("")}</ul>`}</div>`).join("")+(c.home?homeBlock(c):"")}
  document.querySelectorAll(".track").forEach(upd)
 }
 const bg=$("#burger"),mn=$("#menu"),setMenu=o=>{mn.classList.toggle("open",o);bg.setAttribute("aria-expanded",o)};
