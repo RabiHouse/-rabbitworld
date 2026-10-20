@@ -178,3 +178,4 @@ main.doc{max-width:760px}.doc h2{font-size:1.2rem;margin-top:2rem;padding-left:.
 .track figure{flex:0 0 100%;margin:0;position:relative;scroll-snap-align:center}
 .track figure img{display:block;width:100%}
 .track figcaption{position:absolute;left:.8rem;right:.8rem;bottom:2.1rem;padding:.3rem .8rem;border-radius:14px;background:rgba(255,255,255,.9);text-align:center;font-weight:700;font-size:.9rem;line-height:1.5}
+.grouph{margin-top:3rem;text-align:center;font-size:1.4rem}

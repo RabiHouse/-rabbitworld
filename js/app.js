@@ -44,12 +44,12 @@ function render(){
   mp.innerHTML=C.filter(c=>c.map).map(c=>`<button class="pin${c.alert?" alert":""}" type="button" data-id="${c.id}" style="left:${c.map[0]}%;top:${c.map[1]}%;--c:${c.color}" aria-label="${t(c.name)}" title="${t(c.name)}">${c.img?`<img src="${c.img}" alt="">`:c.emoji}</button>`).join("");
   $("#chips").innerHTML=C.filter(c=>pageOf(c)).map(c=>`<a class="chip" style="--c:${c.color}" href="${pageOf(c)}">${t(c.name)}</a>`).join("")}
  document.documentElement.lang=lang;
- const g=$("#list");if(g){const h=C.filter(x=>x.host),r=C.filter(x=>!x.host).slice(0,page=="home"?3:99);g.innerHTML=`<div class="host-row">${h.map(card).join("")}</div><div class="grid">${r.map(card).join("")}</div>${page=="home"?`<p class="more"><a class="btn" href="characters.html">${lang=="ja"?"他のうさも見る":"See more rabbits"} →</a></p>`:""}`};
+ const g=$("#list");if(g){const h=C.filter(x=>x.host),fr=C.filter(x=>x.group=="friends"),r=C.filter(x=>!x.host&&x.group!="friends").slice(0,page=="home"?3:99);g.innerHTML=`<div class="host-row">${h.map(card).join("")}</div><div class="grid">${r.map(card).join("")}</div>${page=="characters"&&fr.length?`<h2 class="grouph">🐾 ${lang=="ja"?"ほかの国のなかまたち":"Friends from other lands"}</h2><div class="grid">${fr.map(card).join("")}</div>`:""}${page=="home"?`<p class="more"><a class="btn" href="characters.html">${lang=="ja"?"他のうさも見る":"See more rabbits"} →</a></p>`:""}`};
  const d=$("#detail");if(d){const c=C.find(x=>x.id==new URLSearchParams(location.search).get("id")&&!x.soon);
   if(!c){d.innerHTML=`<p>${lang=="ja"?"このうさは見つかりませんでした。":"We couldn't find this resident."}</p>`;return}
   document.title=t(c.name)+" | "+(lang=="ja"?"うさの国":"Rabbit World");
-  d.innerHTML=`<div class="profile" style="--c:${c.color}">${pic(c)}<div><h1>${t(c.name)}</h1><p>${t(c.tagline)}</p><p class="tags">${t(c.tags).map(x=>`<span>${x}</span>`).join("")}</p></div></div>`+
-  c.sections.map(s=>`<div class="box" style="--c:${c.color}"><h2>${t(s.t)}</h2>${s.p?`<p>${t(s.p)}</p>${s.link?`<p><a class="btn mini" href="${s.link}" target="_blank" rel="noopener"><i class="fa-solid fa-tv"></i> ${t(s.linkText||s.t)}</a></p>`:""}`:`<ul>${t(s.ul).map(x=>`<li>${s.link?`<a href="${s.link}" target="_blank" rel="noopener">${x}</a>`:x}</li>`).join("")}</ul>`}</div>`).join("")+(c.home?homeBlock(c):"")}
+  d.innerHTML=`<div class="profile" style="--c:${c.color}">${pic(c)}<div><h1>${t(c.name)}</h1>${c.tagline?`<p>${t(c.tagline)}</p>`:""}${c.tags?`<p class="tags">${t(c.tags).map(x=>`<span>${x}</span>`).join("")}</p>`:""}</div></div>`+
+  (c.sections||[]).map(s=>`<div class="box" style="--c:${c.color}"><h2>${t(s.t)}</h2>${s.p?`<p>${t(s.p)}</p>${s.link?`<p><a class="btn mini" href="${s.link}" target="_blank" rel="noopener"><i class="fa-solid fa-tv"></i> ${t(s.linkText||s.t)}</a></p>`:""}`:`<ul>${t(s.ul).map(x=>`<li>${s.link?`<a href="${s.link}" target="_blank" rel="noopener">${x}</a>`:x}</li>`).join("")}</ul>`}</div>`).join("")+(c.home?homeBlock(c):"")}
  document.querySelectorAll(".track").forEach(upd)
 }
 const bg=$("#burger"),mn=$("#menu"),setMenu=o=>{mn.classList.toggle("open",o);bg.setAttribute("aria-expanded",o)};

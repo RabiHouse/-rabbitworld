@@ -1,5 +1,6 @@
 // キャラクター追加: この配列にオブジェクトを足し、img/ に画像を置くだけ。
 // imgs:["1枚目(メイン)","2枚目",...] で複数画像（詳細ページでスライド表示）。1枚だけなら img:"..." でOK。
+// group:"friends" を付けると、うさたちの下の「ほかの国のなかまたち」に並びます（犬・リス・ねこなど）。付けなければ、うさたちの欄です。
 // map:[x,y] = pin position on map.html in % (0-100). Omit it to hide the pin.
 // To add a character: append an object here and drop an image in img/.
 window.CHARS=[
@@ -111,7 +112,20 @@ window.CHARS=[
  {t:{ja:"看板メニュー",en:"Signature breads"},ul:{
   ja:["サクサクもちもち チモシーバゲット","日持ちのする たまごパン","特製ミックスサンドイッチ"],
   en:["Crispy-chewy Timothy baguette","Long-lasting egg bread","Special mixed sandwich"]}}]},
-{id:"majoram",map:[64,66],img:"img/majoram.webp",color:"#F7B6A3",
+{id:"majoram",home:{emoji:"🌷",name:{ja:"マジョラムのお花屋さん",en:"Majoram's flower shop"},map:true,
+ imgs:["v1792373046/Majoram1_rauz7f.png","v1792373040/Majoram2_ijavlm.png","v1792373040/Majoram3_tugnua.png"],
+ caps:{ja:["いつも季節の花がたくさん","入り口を入ると、お花とともに、お花に関する資料がたくさん","奥へ行くと、生育中のお花がたくさん"],
+  en:["Seasonal flowers all year round","Inside the entrance, flowers and lots of materials about flowers","Further in, lots of flowers still growing"]},
+ text:{ja:["朝6時半から夜9時まで、いつでも大切な人のためにお花を渡せるように、長い時間開店しているお花屋さん。マジョラムさんのこだわりで、表にはいつも花が咲いて、いい香りが漂うように、いろいろなお花が植えられています。","お花の研究に熱心なマジョラムさんは、ほぼ一日中このお店にいて、花の研究をしたり、お手入れをしたりしています。そのため、お花はいつも元気で美しく、可憐に咲いているものばかり。お花を買いに来るお客さんが後を絶たず、摘みたて、咲きたてのお花が、つねにあります。","あまり広いお店ではありませんが、マジョラムさんとお花のおかげで、とても居心地のよい空間になっています。お昼には、近所のうさたちがやってきて、ときどき裏の庭で、お花を楽しみながら、マジョラムさんとアフタヌーンティーを楽しむこともしばしば。2階も、お花と資料でいっぱいです。","大切な、想っているうさや世話人に、ちょっとだけお礼をしたい。そんなときは、マジョラムさんのお花屋さんを、少しのぞいてみてはいかがですか。きっと、マジョラムさんのたくさんの知識と、花への愛情によって、その時に欲しい、あげたいお花が、導かれるように現れるはずです。"],
+  en:["Majoram's flower shop stays open from 6:30 in the morning until 9 at night, so you can hand flowers to someone dear at any time. At Majoram's insistence, all sorts of flowers are planted out front so that blossoms are always blooming and a lovely scent drifts through the air.","Majoram is devoted to studying flowers, and spends almost the whole day in the shop researching and tending them. That is why the flowers are always healthy, beautiful and delicately blooming. Customers keep coming, and there are always freshly picked, freshly bloomed flowers.","The shop is not very big, but thanks to Majoram and her flowers it is a very cozy space. At noon, neighborhood rabbits drop by, and quite often enjoy afternoon tea with Majoram in the back garden among the flowers. The second floor is also full of flowers and materials.","When you want to thank a rabbit you care about, or your caretaker, just a little, why not take a peek into Majoram's flower shop? With Majoram's wealth of knowledge and love for flowers, the flower you want, the one you want to give, will surely appear as if guided to you."]},
+ facts:[
+  {i:"🌷",k:{ja:"お店の表",en:"Out front"},v:{ja:"いつも花が咲いて、いい香りが漂います",en:"Flowers always in bloom, with a lovely scent in the air"}},
+  {i:"⏰",k:{ja:"営業時間",en:"Hours"},v:{ja:"朝6時半から夜9時まで",en:"From 6:30 in the morning to 9 at night"}},
+  {i:"📚",k:{ja:"入り口",en:"Entrance"},v:{ja:"お花と、お花に関する資料がたくさん",en:"Flowers and plenty of flower materials"}},
+  {i:"🌱",k:{ja:"奥",en:"Back"},v:{ja:"生育中のお花がたくさん",en:"Lots of flowers still growing"}},
+  {i:"🪜",k:{ja:"2階",en:"Upstairs"},v:{ja:"お花と資料でいっぱい",en:"Full of flowers and materials"}},
+  {i:"🫖",k:{ja:"裏の庭",en:"Back garden"},v:{ja:"お昼に、近所のうさたちとアフタヌーンティー",en:"Afternoon tea with the neighborhood rabbits at noon"}}]},
+ map:[64,66],img:"img/majoram.webp",color:"#F7B6A3",
  name:{ja:"マジョラム",en:"Majoram"},
  role:{ja:"フラワーコーディネーター／お花屋さん店主",en:"Flower coordinator / Owner of the flower shop"},
  tagline:{ja:"お花が長持ちすると評判の、姉御肌のお花屋さん",en:"The big-sister florist whose flowers last and last"},
@@ -183,7 +197,21 @@ window.CHARS=[
  {t:{ja:"代表曲・名シーン",en:"Signature moments"},ul:{
   ja:["アリア『満天の星空の下で』：イントロだけで会場が静まり返る伝説のアリア","カーテンコールでドレスの裾を踏んでよろけ、ファンから「可愛い！」と歓声が上がるのがお約束"],
   en:["Aria “Under the Starry Sky”: a legendary piece that silences the hall from the first notes","At curtain calls she often trips on her hem, and fans cheer “So cute!”"]}}]},
-{id:"cranberry",map:[56,49],img:"img/cranberry.webp",color:"#F4A3A0",
+{id:"cranberry",home:{emoji:"🥧",name:{ja:"クランベリー一家のパイ屋さん",en:"The Cranberry family's pie shop"},map:true,
+ imgs:["v1792373044/cramberry1_mmd7pt.png","v1792373046/cramberry2_hzngkn.png","v1792373045/cramberry3_eveav7.png"],
+ caps:{ja:["個うさ経営なので、小さくて可愛いお店","店内も広くはないけれど、毎日いろいろなパイが並びます","お店で一番人気！大きいのに一人で食べられちゃう「独り占めアップルパイ」"],
+  en:["A small, cute, family-run shop","The shop is not big, but a variety of pies lines up every day","The shop's most popular item: the “All-Mine Apple Pie,” big but easy to finish alone"]},
+ text:{ja:["クランベリー夫妻の奥さん、ホーリーが、小さな頃からあこがれていたパイ屋さん。夫のキングスが、結婚5周年の記念に場所を決めて、小さなうさの村から、うさの街へ越してきて、オープンしました。朝10時から、だいたい15時ごろまで開いています。","個うさ経営なので、小さくて可愛いお店。始めた直後は、ホーリーが仔うさたちを見ながら、1うさでやっていましたが、のちにお腹に双子がいることがわかり、出産。いまは、キングスと夫婦で時間を作って経営しているため、お休みが不定期になっています。","ホーリーのパイは、熱々でも冷えてもサクサク。中のフィリングも、甘さと酸っぱさ、ほんの少しの苦味のバランスが絶妙です。あまり大きく宣伝していないのに、毎日売り切れる商品が数多くあり、売り切れのために、早く閉店してしまうことも多いとか。","店内も広くはないけれど、毎日、いろいろなパイと、パイに合う手作りのクリームやジャムがあります。うさのためのチモシーパイや、王道のアップルパイ、仔うさのいる母うさならではの、仔うさのための初めてのパイや、離乳食に使えるジャムなども、常備販売していて、母うさ界隈でも、親子にやさしいお菓子屋さんとして、評判になっています。","お店に行くと、ホーリーの仔うさたちが、いつもお店のお手伝いをしていて、ホーリーののんびりとした性格が、お店の雰囲気に映って、とても家庭的な空気を生み出しています。世話人用にも、バターや砂糖が入ったアップルパイやチェリーパイなどを扱っていて、うさと世話人、どちらもおいしく楽しめます。開店日をチェックして、うさと一緒に、世話人も足を運んでみてはいかがですか。"],
+  en:["Holly, wife of the Cranberry couple, had longed for a pie shop since she was little. To mark their fifth wedding anniversary, her husband Kings chose the spot, and they moved from a small rabbit village to Rabbit Town to open it. The shop is open from 10 in the morning until about 3 in the afternoon.","Because it is run by just the family, the shop is small and cute. At first Holly ran it alone while watching her little ones, but then she learned she was expecting twins and gave birth. Now she and Kings run it by finding time between them, so the days off are irregular.","Holly's pies are crisp whether served piping hot or cold, and the filling has a wonderful balance of sweetness, sourness and a touch of bitterness. Even though they hardly advertise, many items sell out every day, and the shop often closes early because everything is sold.","The shop is not big, but every day it has a variety of pies along with handmade cream and jam that go with them. It always sells Timothy pies for rabbits, classic apple pie, first-time pies made for little ones by a mother with little ones herself, and jam that can be used for baby food. It has a reputation among mother rabbits as a sweets shop that is kind to parents and children.","Holly's little ones are always helping in the shop, and Holly's easygoing nature is reflected in the atmosphere, creating a very homey feel. For caretakers there are apple and cherry pies made with butter and sugar, so both rabbits and caretakers can enjoy them. Check the open days, and why not come along with your rabbit?"]},
+ facts:[
+  {i:"🕙",k:{ja:"営業時間",en:"Hours"},v:{ja:"朝10時から、だいたい15時ごろまで",en:"From 10 in the morning to about 3 in the afternoon"}},
+  {i:"📅",k:{ja:"お休み",en:"Days off"},v:{ja:"不定期なので、開店日をチェック",en:"Irregular, so check the open days"}},
+  {i:"🥧",k:{ja:"一番人気",en:"Most popular"},v:{ja:"独り占めアップルパイ。大きいのに一人で食べられちゃう",en:"The All-Mine Apple Pie: big, yet easy to finish alone"}},
+  {i:"🌿",k:{ja:"うさのパイ",en:"For rabbits"},v:{ja:"チモシーパイや、王道のアップルパイ",en:"Timothy pie and classic apple pie"}},
+  {i:"🍼",k:{ja:"仔うさのために",en:"For little ones"},v:{ja:"初めてのパイや、離乳食に使えるジャム",en:"First-time pies and jam usable for baby food"}},
+  {i:"🍒",k:{ja:"世話人のパイ",en:"For caretakers"},v:{ja:"バターや砂糖入りのアップルパイ、チェリーパイ",en:"Apple and cherry pies with butter and sugar"}},
+  {i:"🍯",k:{ja:"クリームとジャム",en:"Cream and jam"},v:{ja:"毎日、パイに合う手作りのものが並びます",en:"Handmade ones that go with the pies, every day"}}]},
+ map:[56,49],img:"img/cranberry.webp",color:"#F4A3A0",
  name:{ja:"クランベリー一家",en:"The Cranberry Family"},
  role:{ja:"パイ屋さんの仲良しファミリー",en:"A close family running a pie shop"},
  tagline:{ja:"行列の絶えない大人気パイ屋さん",en:"The pie shop with a never-ending line"},
@@ -297,7 +325,33 @@ window.CHARS=[
  {t:{ja:"♥らびこ♥との関係",en:"With ♥Rabiko♥"},p:{
   ja:"らびこは毎晩SNSでナイトの目撃情報や最新の噂をチェックするのが日課。ご近所でナイトにまつわる事件や出来事があると、自分のSNSやブログ、日記に熱心に書きとめています。",
   en:"Rabiko checks sightings and the latest rumors about Night on social media every night. When something connected to Night happens nearby, she eagerly records it in her own social media, blog and diary."}}]},
-{id:"leblanc",map:[15,40],img:"img/leblanc.webp",color:"#CDEEDF",
+{id:"nekomi",group:"friends",map:[73,36],img:"img/nekomi.webp",emoji:"🐱",color:"#B8A9E8",
+ name:{ja:"★ねこみ★",en:"★Nekomi★"},
+ role:{ja:"♥らびこ♥の大親友",en:"♥Rabiko♥'s best friend"},
+ tagline:{ja:"らびこの大親友。猫の国から来た、のんびりやのヨガ好き",en:"Rabiko's best friend. An easygoing yoga lover who came from Cat Country"},
+ tags:{ja:["猫の国から移住","ヨガ","日向ぼっこ","のんびり"],en:["Moved from Cat Country","Yoga","Sunbathing","Easygoing"]},
+ sections:[
+ {t:{ja:"♥らびこ♥との関係",en:"With ♥Rabiko♥"},p:{
+  ja:"らびこの大親友で、一緒に遊ぶことが多い仲です。公園で出会った日から、ずっと仲良しです。",
+  en:"She is Rabiko's best friend, and the two often play together. They have been close ever since the day they met at the park."}},
+ {t:{ja:"プロフィール",en:"Profile"},ul:{
+  ja:["出身：猫の国。旅行でうさの国に来て、気に入ったところ、たまたま公園でらびこと出会って意気投合し、猫の国から移住してきた","趣味：ヨガと日向ぼっこ。ヨガは、うさの国で仕事にもしている","食べ物：うさの国には、なかなかないので、猫の国のアンテナショップや、猫の国から取り寄せている"],
+  en:["From Cat Country. While traveling in Rabbit World she took a liking to it, happened to meet Rabiko at a park and hit it off, and moved over from Cat Country","Hobbies: yoga and sunbathing. She also does yoga for a living in Rabbit World","Food: it is hard to find in Rabbit World, so she orders it from Cat Country antenna shops and from Cat Country itself"]}},
+ {t:{ja:"性格",en:"Personality"},p:{
+  ja:"猫の国に多い、気まぐれな猫ではなく、のんびりした性格。せっかちならびこと、対照的です。猫らしく、束縛は嫌いですが、いつもらびこと一緒に、楽しく過ごしています。動きも、猫らしくて、やっぱりうさとは違います。",
+  en:"Unlike the capricious cats common in Cat Country, she is easygoing, quite the opposite of impatient Rabiko. Like a cat, she dislikes being tied down, yet she always has fun with Rabiko. Her movements are cat-like too, and naturally different from rabbits'."}}],
+ home:{emoji:"🏡",name:{ja:"★ねこみ★のお家",en:"★Nekomi★'s home"},map:true,
+  imgs:["v1792373045/nekomi1_emcalk.png","v1792373041/nekomi2_ab2ipk.png","v1792373042/nekomi3_hrv9bx.png"],
+  caps:{ja:["家の外観","家の内観（屋根裏部屋）","家の内観（パープルの壁の部屋）"],en:["The house from outside","Inside: the attic room","Inside: the room with purple walls"]},
+  text:{ja:["たくさんジャンプできるように、広いお庭のある、ねこさん用のお家になっています。","お外の右上にある屋根裏部屋には、★ねこみ★さんは、下からジャンプして入れるそうよ❣","★ねこみ★さんの、お仕事兼趣味のお部屋や、ストレッチをしてのんびりするリビングなど、壁紙は、大好きなパープルでそろえているんですって。"],
+   en:["It is a house made for cats, with a big garden so she can jump around as much as she likes.","They say ★Nekomi★ can jump up from below into the attic room at the top right of the outside ❣","They say the wallpaper is all her favorite purple, in her room for work and hobbies and in the living room where she stretches and relaxes."]},
+  facts:[
+   {i:"🌳",k:{ja:"広いお庭",en:"Big garden"},v:{ja:"たくさんジャンプできます",en:"Plenty of room to jump"}},
+   {i:"🏠",k:{ja:"屋根裏部屋",en:"Attic room"},v:{ja:"外の右上。下からジャンプして入れます",en:"At the top right outside. She can jump up into it from below"}},
+   {i:"💜",k:{ja:"パープルの壁",en:"Purple walls"},v:{ja:"大好きなパープルで、壁紙をそろえています",en:"The wallpaper is all her favorite purple"}},
+   {i:"🛋️",k:{ja:"リビング",en:"Living room"},v:{ja:"ストレッチをして、のんびり",en:"For stretching and relaxing"}},
+   {i:"✨",k:{ja:"お仕事兼趣味のお部屋",en:"Work-and-hobby room"},v:{ja:"お仕事と趣味のためのお部屋",en:"A room for both work and hobbies"}}]}},
+ {id:"leblanc",map:[15,40],img:"img/leblanc.webp",color:"#CDEEDF",
  name:{ja:"ルブラン美夜子",en:"Leblanc Miyako"},
  role:{ja:"うさTV お天気キャスター／フリーアナウンサー",en:"Rabbit TV weather caster / Freelance announcer"},
  tagline:{ja:"うさの国の人気お天気キャスター",en:"Rabbit World's popular weather caster"},
